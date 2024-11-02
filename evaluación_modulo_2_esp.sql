@@ -12,7 +12,7 @@ SELECT
 FROM film; 
     
     
--- Ejercicio 2: Muestra los nombres de todas las películas que tengan una clasificación de "PG-13.
+-- Ejercicio 2: Muestra los nombres de todas las películas que tengan una clasificación de "PG-13".
 
 SELECT 
 	title AS titulo,
@@ -62,7 +62,6 @@ FROM actor;
 -- Ejercicio 6: Encuentra el nombre y apellido de los actores que tengan "Gibson" en su apellido.
 
 -- Utilizando LIKE: 
-
 SELECT 
 	first_name AS nombre, 
     last_name AS apellido
@@ -71,7 +70,6 @@ WHERE
 	last_name LIKE '%Gibson%';	
     
 -- Utilizando REGEX: 
-
 SELECT 
 	first_name AS nombre, 
     last_name AS apellido
@@ -125,12 +123,12 @@ GROUP BY customer_id;
 -- Query final: 
 
 SELECT 
-	c.customer_id, 
-	c.first_name, 
-    c.last_name, 
+	c.customer_id AS id_cliente,
+	c.first_name AS nombre_cliente, 
+    c.last_name AS apellido_cliente,
     COUNT(r.rental_id) AS total_alquileres
 FROM customer AS c
-LEFT JOIN rental AS r -- left join para comprobar en caso que algún cliente no haya alquilado películas. 
+LEFT JOIN rental AS r -- left join para comprobar en caso que algún cliente no haya alquilado ninguna película. 
 USING 
 	(customer_id) 
 GROUP BY
@@ -150,7 +148,7 @@ Tabla rental: inventory_id & rental_id
 
 SELECT 
     c.name AS nombre_categoria,
-    COUNT(r.rental_id) AS total_alquileres
+    COUNT(r.rental_id) AS recuento_alquileres
 FROM category AS c
 	JOIN film_category as f
 	USING
@@ -163,19 +161,19 @@ FROM category AS c
 		(inventory_id)
 GROUP BY 
     c.name
-ORDER BY total_alquileres; 
+ORDER BY recuento_alquileres; 
 
 
 -- Ejercicio 12: Encuentra el promedio de duración de las películas para cada clasificación de la tabla film y muestra la clasificación junto con el promedio de duración: 
 
 SELECT
-	rating AS clasificación,
-    AVG(length) AS promedio_duración
+	rating AS clasificacion,
+    AVG(length) AS promedio_duracion
 FROM film
 GROUP BY 
-	clasificación
+	clasificacion
 ORDER BY 
-	promedio_duración DESC; 
+	promedio_duracion DESC; 
     
     
 -- Ejercicio 13: Encuentra el nombre y apellido de los actores que aparecen en la película con title "Indian Love".
@@ -183,7 +181,7 @@ ORDER BY
 /* Comprobacion uniones: 
 Tabla film: title & film_id
 Tabla film_actor: film_id & actor_id
-Tabla actor: actor_id & first last name 
+Tabla actor: actor_id & first-last name 
 */
 
 SELECT 
@@ -234,7 +232,7 @@ WHERE
 -- Ejercicio 16: Encuentra el título de todas las películas que fueron lanzadas entre el año 2005 y 2010
 
 SELECT 
-	title AS películas_2005_2010
+	title AS peliculas_2005_2010
 FROM film
 WHERE 
 	release_year BETWEEN 2005 AND 2010; 
@@ -249,7 +247,7 @@ Tabla category: category_id & name
 */
 
 SELECT 
-	f.title AS películas_familiares
+	f.title AS peliculas_familiares
 FROM film AS f
 JOIN film_category AS fa
 USING
@@ -441,4 +439,4 @@ USING
 WHERE 
 	f.length > 180 AND c.name = 'Comedy'; 
     
--- 
+

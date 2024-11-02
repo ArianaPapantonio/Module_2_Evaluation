@@ -55,7 +55,7 @@ SELECT
 -- Exercise 5: Find the name of all the actors.  
 
 SELECT 
-	first_name AS actors_names
+	first_name AS actor_name
 FROM actor; 
 
 
