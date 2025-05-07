@@ -1,40 +1,66 @@
-## README - Evaluación del Módulo 2: SQL
+# 🗃️ Final Evaluation – Module 2: SQL
 
-### Descripción del Proyecto
+This project was completed as part of the **final evaluation for Module 2** of the Adalab Data Analytics Bootcamp.  
+It demonstrates the ability to query and analyze data using **SQL**, based on the **Sakila** database, which simulates a movie rental store.
 
-Este proyecto es parte de la evaluación del Módulo 2 del Bootcamp de Data Analysis, enfocado en el manejo y análisis de datos usando SQL. 
+---
 
-Durante esta evaluación, se espera aplicar las habilidades adquiridas en consultas y análisis de bases de datos, utilizando comandos SQL. Para ello, trabajaremos con la base de datos Sakila, que simula una tienda de alquiler de películas. Esta base de datos incluye tablas como film (películas), actor (actores), customer (clientes), rental (alquileres), category (categorías), entre otras. Estas tablas están diseñadas para contener información relevante sobre películas, actores, clientes y alquileres, y nos permitirán realizar consultas y análisis de datos.
+## 🎯 Evaluation Objectives
 
-### Objetivos de la Evaluación
+- Write and structure SQL queries to extract and analyze data.
+- Apply filtering, aggregation, joins, subqueries, and CTEs (Common Table Expressions).
+- Solve 23 main exercises + 2 bonus challenges.
 
-- Aplicar habilidades de consultas y análisis en SQL utilizando la base de datos Sakila.
-- Desarrollar consultas que extraigan información clave de las tablas y respondan preguntas detalladas.
-- Practicar uniones (JOIN), subconsultas, funciones de agregación, y el uso de Common Table Expressions (CTEs).
-- Mejorar la comprensión de estructuras de datos y cómo utilizarlas para obtener información útil y relevante.
+---
 
-### Contenido del Proyecto
+## 🧱 Database Used: Sakila
 
-El proyecto consta de 23 ejercicios y 2 ejercicios adicionales de bonus. Estos cubren aspectos tales como: 
+Sakila is a sample relational database with tables such as:
 
--  Queries básicas: utilización de los operadores SELECT, WHERE, IN, BETWEEN, DISTINCT, entre otros. 
--  Queries avanzadas: implementación de funciones avanzadas como MIN, MAX, AVG, COUNT asi como también el uso de las sentencias GROUP BY, HAVING y CASE. 
--  Union de tablas: combinación de datos a través de diferentes tipos de JOINS como INNER JOIN, RIGHT JOIN, LEFT JOIN, entre otros. 
--  Operadores especiales de filtro: combinación y filtrado de datos por medio de operadores de filtro como por ejemplo UNION, IN, NOT IN, LIKE y REGEX. 
--  Subqueries y CTE's: utilización de subconsultas para responder preguntas específicas, empleo de consultas correlacionadas para obtener información más compleja y uso de  de Common Table Expression   (CTEs) para la organización de consultas largas y la mejora de su legibilidad. 
+- 🎬 **Film** (`film`)
+- 👥 **Actors** (`actor`)
+- 📋 **Categories** (`category`)
+- 👤 **Customers** (`customer`)
+- 🛒 **Rentals** (`rental`)
+- 📦 **Inventory**, among others
 
-### Requisitos
+This dataset simulates a real-world business and allows multi-table querying and deep filtering.
 
-#### Software:
-Un gestor de bases de datos relacionales como MySQL.
+---
 
-Workbench o cualquier herramienta de gestión de SQL para ejecutar las consultas.
+## 📄 Project Contents
 
-#### Base de Datos: 
-Base de datos "Sakila".
+The queries are organized by difficulty level and cover:
 
-### Estructura de Archivos
+- 🔹 **Basic queries**: `SELECT`, `WHERE`, `DISTINCT`, `BETWEEN`, `IN`
+- 🔹 **Aggregations**: `MIN`, `MAX`, `AVG`, `COUNT`, `GROUP BY`, `HAVING`
+- 🔹 **Advanced filtering**: `CASE WHEN`, `LIKE`, `REGEXP`, `NOT IN`
+- 🔹 **Table joins**: `INNER JOIN`, `LEFT JOIN`, `RIGHT JOIN`
+- 🔹 **Subqueries & CTEs**: to answer complex questions and improve query readability
 
-"evaluación_modulo_2_esp": Archivo que contiene todas las consultas SQL desarrolladas para resolver los ejercicios en idioma español.
-"evaluación_modulo_2_eng": Archivo que contiene todas las consultas SQL desarrolladas para resolver los ejercicios en idioma inglés.
-"README.md": Este archivo, que explica el proyecto y proporciona instrucciones de uso.
+---
+
+## 🛠 Requirements
+
+- A relational database manager (e.g. **MySQL**)
+- A SQL interface like **MySQL Workbench**, **DBeaver**, or similar
+- The **Sakila** database installed
+
+---
+
+## 📁 File Structure
+
+| File                      | Description                                     |
+|---------------------------|-------------------------------------------------|
+| `evaluacion_modulo_2_eng.sql` | Full SQL solutions in English                    |
+| `evaluacion_modulo_2_esp.sql` | SQL queries written originally in Spanish        |
+| `README.md`               | Project documentation (this file)               |
+
+---
+
+## 📓 Notes
+
+- Each query includes inline comments to explain logic and expected results.
+- Bonus exercises involve correlated subqueries and advanced use of aggregate functions.
+
+---
